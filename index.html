@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SABA TELECOM</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<img src="logo.png" class="logo">
+<h1>SABA TELECOM</h1>
+<p>Second Hand Mobiles & Accessories</p>
+</header>
+
+<nav>
+<a href="#">Home</a>
+<a href="#mobiles">Mobiles</a>
+<a href="accessories.html">Accessories</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<!-- IMAGE SLIDER -->
+
+
+<!-- SEARCH BAR -->
+
+<div class="search-box">
+<input type="text" id="search" placeholder="Search Mobile..." onkeyup="searchMobile()">
+</div>
+
+<!-- BRAND FILTER -->
+
+<div class="filters">
+<button onclick="filterBrand('all')">All</button>
+<button onclick="filterBrand('Samsung')">Samsung</button>
+<button onclick="filterBrand('Apple')">Apple</button>
+<button onclick="filterBrand('Xiaomi')">Xiaomi</button>
+<button onclick="filterBrand('Vivo')">Vivo</button>
+<button onclick="filterBrand('Realme')">Realme</button>
+<button onclick="filterBrand('Oppo')">Oppo</button>
+<button onclick="filterBrand('OnePlus')">OnePlus</button>
+<button onclick="filterBrand('Motorola')">Motorola</button>
+<button onclick="filterBrand('Nothing')">Nothing</button>
+<button onclick="filterBrand('POCO')">POCO</button>
+<button onclick="filterBrand('Redmi')">Redmi</button>
+<button onclick="filterBrand('IQ')">IQ</button>
+
+</div>
+
+<section id="mobiles">
+
+<h2 class="title">Available Mobiles</h2>
+
+<div class="products">
+
+<div class="product IQ">
+<img src="IQ z6 lite 5g.jpeg">
+<h3>IQ z6 lite 5g</h3>
+<p>Ram: 6GB / 128GB</p>
+<p class="price">₹28000</p>
+<button onclick="buy('IQ z6 Lite 5g')">Buy</button>
+</div>
+
+<div class="product Realme">
+<img src="realme7.jpeg">
+<h3>realme 7</h3>
+<p>Ram: 6GB / 128GB</p>
+<p class="price">₹8000</p>
+<button onclick="buy('realme 7')">Buy</button>
+</div>
+
+<div class="product Realme">
+<img src="realme 11x 5g.jpeg">
+<h3>Realme 11x 5g</h3>
+<p>Ram: 8GB / 128GB</p>
+<p class="price">₹10000</p>
+<button onclick="buy('Realme 11x 5g')">Buy</button>
+</div>
+
+<div class="product Motorola">
+<img src="motorolag72.jpeg">
+<h3>motorola g72</h3>
+<p>Ram: 6GB / 128GB</p>
+<p class="price">₹10000</p>
+<button onclick="buy('motorola g72')">Buy</button>
+</div>
+
+<div class="product Redmi">
+<video width="100%" controls>
+<source src="redmi note 11 pro plus.mp4" type="video/mp4">
+</video>
+<h3>Redmi note 11 pro plus</h3>
+<p>Ram: 8GB / 128GB</p>
+<p class="price">₹10000</p>
+<button onclick="buy('Redmi note 11 pro plus')">Buy</button>
+</div>
+
+<div class="product Redmi">
+<img src="redmi note 7 pro.jpeg">
+<h3>Redmi Note 7 pro</h3>
+<p>Ram: 4GB / 64GB</p>
+<p class="price">₹8000</p>
+<button onclick="buy('Redmi Note 7 pro')">Buy</button>
+</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+<h2>Contact</h2>
+<p>Phone : +91 99782 56555</p>
+<p>Email : alikham7869@gmail.com</p>
+</section>
+
+<footer>
+<p>© 2026 SABA TELECOM</p>
+<p>Developed by Pathan Mohammed Alikhan</p>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+
+<a href="https://wa.me/919978256555" class="whatsapp">WhatsApp</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>

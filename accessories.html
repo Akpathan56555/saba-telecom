@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SABA MOBILE - Accessories</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:linear-gradient(135deg,#141e30,#243b55);
+color:white;
+text-align:center;
+}
+
+/* HEADER */
+
+header{
+padding:30px;
+font-size:28px;
+font-weight:bold;
+letter-spacing:2px;
+}
+
+/* PRODUCT GRID */
+
+.products{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+padding:40px;
+}
+
+/* PRODUCT CARD */
+
+.product{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+border-radius:15px;
+padding:20px;
+width:220px;
+transition:0.4s;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.product:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* PRODUCT IMAGE */
+
+.product img{
+width:100%;
+border-radius:10px;
+transition:0.4s;
+}
+
+.product:hover img{
+transform:scale(1.08);
+}
+
+/* TEXT */
+
+h3{
+margin:10px 0;
+}
+
+/* BUTTON */
+
+button{
+background:#25D366;
+border:none;
+padding:10px 15px;
+color:white;
+border-radius:6px;
+cursor:pointer;
+font-size:15px;
+transition:0.3s;
+}
+
+button:hover{
+background:#1ebe5d;
+transform:scale(1.05);
+}
+
+/* FLOATING WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+color:white;
+text-decoration:none;
+box-shadow:0 5px 20px rgba(0,0,0,0.4);
+animation:float 2s infinite ease-in-out;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-8px);}
+100%{transform:translateY(0);}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+SABA TELECOM ACCESSORIES
+</header>
+
+<a href="index.html" class="home-btn">⬅ Back to Home</a>
+
+<div class="products">
+
+<div class="product">
+<img src="charger.jpg">
+<h3>Mobile Charger</h3>
+<p>Condition: New</p>
+<p>Price: ₹500</p>
+<button onclick="buy('Mobile Charger')">Buy on WhatsApp</button>
+</div>
+
+<div class="product">
+<img src="earphones.jpg">
+<h3>Earphones</h3>
+<p>Condition: New</p>
+<p>Price: ₹300</p>
+<button onclick="buy('Earphones')">Buy on WhatsApp</button>
+</div>
+
+<div class="product">
+<img src="cover.jpg">
+<h3>Mobile Cover</h3>
+<p>Condition: New</p>
+<p>Price: ₹200</p>
+<button onclick="buy('Mobile Cover')">Buy on WhatsApp</button>
+</div>
+
+<div class="product">
+<img src="tempered.jpg">
+<h3>Tempered Glass</h3>
+<p>Condition: New</p>
+<p>Price: ₹150</p>
+<button onclick="buy('Tempered Glass')">Buy on WhatsApp</button>
+</div>
+
+<div class="product">
+<img src="powerbank.jpg">
+<h3>Power Bank</h3>
+<p>Condition: New</p>
+<p>Price: ₹1200</p>
+<button onclick="buy('Power Bank')">Buy on WhatsApp</button>
+</div>
+
+</div>
+
+<a class="whatsapp" href="https://wa.me/919978256555" target="_blank">
+💬
+</a>
+
+<script>
+
+function buy(product){
+
+let phone="919978256555";
+
+let message="Hello, I want to buy " + product;
+
+let url="https://wa.me/"+phone+"?text="+encodeURIComponent(message);
+
+window.open(url);
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+body{
+font-family:Arial, sans-serif;
+margin:0;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+text-align:center;
+}
+
+header{
+padding:40px;
+background:linear-gradient(270deg,#00c6ff,#0072ff,#00c6ff);
+background-size:400% 400%;
+animation:gradientMove 8s ease infinite;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.logo{
+width:110px;
+border-radius:50%;
+background:white;
+padding:5px;
+box-shadow:0 0 15px rgba(0,0,0,0.3);
+}
+
+nav{
+background:#00bcd4;
+padding:12px;
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-size:18px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:black;
+}
+
+.search-box{
+margin:20px;
+}
+
+.search-box input{
+width:300px;
+padding:10px;
+border-radius:20px;
+border:none;
+}
+
+.filters{
+margin:20px;
+}
+
+.filters button{
+margin:5px;
+padding:8px 15px;
+border:none;
+background:#00bcd4;
+color:white;
+border-radius:20px;
+cursor:pointer;
+}
+
+.title{
+font-size:30px;
+margin-top:20px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:20px;
+padding:30px;
+}
+
+.product{
+background:white;
+color:black;
+padding:15px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.3);
+transition:0.3s;
+}
+
+.product:hover{
+transform:translateY(-10px);
+}
+
+.product img,
+.product video{
+width:100%;
+border-radius:6px;
+}
+
+.price{
+color:#00bcd4;
+font-size:20px;
+font-weight:bold;
+}
+
+button{
+background:#25D366;
+border:none;
+color:white;
+padding:10px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.contact{
+background:white;
+color:black;
+padding:40px;
+}
+
+footer{
+background:black;
+padding:20px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:1200px){
+.products{
+grid-template-columns:repeat(4,1fr);
+}
+}
+
+@media (max-width:900px){
+.products{
+grid-template-columns:repeat(3,1fr);
+}
+}
+
+@media (max-width:600px){
+.products{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media (max-width:400px){
+.products{
+grid-template-columns:1fr;
+}
+}
