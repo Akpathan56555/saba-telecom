@@ -22,16 +22,13 @@
 <a href="#contact">Contact</a>
 </nav>
 
-<!-- IMAGE SLIDER -->
-
-
-<!-- SEARCH BAR -->
+<div class="slider">
+<img id="slide" src="banner1.png">
+</div>
 
 <div class="search-box">
 <input type="text" id="search" placeholder="Search Mobile..." onkeyup="searchMobile()">
 </div>
-
-<!-- BRAND FILTER -->
 
 <div class="filters">
 <button onclick="filterBrand('all')">All</button>
@@ -44,69 +41,46 @@
 <button onclick="filterBrand('OnePlus')">OnePlus</button>
 <button onclick="filterBrand('Motorola')">Motorola</button>
 <button onclick="filterBrand('Nothing')">Nothing</button>
-<button onclick="filterBrand('POCO')">POCO</button>
+<button onclick="filterBrand('Poco')">Poco</button>
 <button onclick="filterBrand('Redmi')">Redmi</button>
 <button onclick="filterBrand('IQ')">IQ</button>
-
 </div>
 
 <section id="mobiles">
 
 <h2 class="title">Available Mobiles</h2>
 
-<div class="products">
+<div class="products" id="products"></div>
 
-<div class="product IQ">
-<img src="IQ z6 lite 5g.jpeg">
-<h3>IQ z6 lite 5g</h3>
-<p>Ram: 6GB / 128GB</p>
-<p class="price">₹28000</p>
-<button onclick="buy('IQ z6 Lite 5g')">Buy</button>
-</div>
+</section>
 
-<div class="product Realme">
-<img src="realme7.jpeg">
-<h3>realme 7</h3>
-<p>Ram: 6GB / 128GB</p>
-<p class="price">₹8000</p>
-<button onclick="buy('realme 7')">Buy</button>
-</div>
+<section class="repair">
 
-<div class="product Realme">
-<img src="realme 11x 5g.jpeg">
-<h3>Realme 11x 5g</h3>
-<p>Ram: 8GB / 128GB</p>
-<p class="price">₹10000</p>
-<button onclick="buy('Realme 11x 5g')">Buy</button>
-</div>
+<h2 class="title">Mobile Repair Services</h2>
 
-<div class="product Motorola">
-<img src="motorolag72.jpeg">
-<h3>motorola g72</h3>
-<p>Ram: 6GB / 128GB</p>
-<p class="price">₹10000</p>
-<button onclick="buy('motorola g72')">Buy</button>
-</div>
+<div class="repair-grid">
 
-<div class="product Redmi">
-<video width="100%" controls>
-<source src="redmi note 11 pro plus.mp4" type="video/mp4">
-</video>
-<h3>Redmi note 11 pro plus</h3>
-<p>Ram: 8GB / 128GB</p>
-<p class="price">₹10000</p>
-<button onclick="buy('Redmi note 11 pro plus')">Buy</button>
-</div>
+<div class="repair-card" onclick="openRepair('Screen Replacement')">📱 Screen Replacement</div>
 
-<div class="product Redmi">
-<img src="redmi note 7 pro.jpeg">
-<h3>Redmi Note 7 pro</h3>
-<p>Ram: 4GB / 64GB</p>
-<p class="price">₹8000</p>
-<button onclick="buy('Redmi Note 7 pro')">Buy</button>
-</div>
+<div class="repair-card" onclick="openRepair('Battery Replacement')">🔋 Battery Replacement</div>
+
+<div class="repair-card" onclick="openRepair('Charging Problem')">🔌 Charging Problem Fix</div>
+
+<div class="repair-card" onclick="openRepair('Mic Speaker Repair')">🎤 Mic & Speaker Repair</div>
+
+<div class="repair-card" onclick="openRepair('Network Issue')">📶 Network Issue Fix</div>
+
+<div class="repair-card" onclick="openRepair('Software Flash')">💾 Software Flash</div>
+
+<div class="repair-card" onclick="openRepair('Water Damage')">💧 Water Damage Repair</div>
+
+<div class="repair-card" onclick="openRepair('Other Problem')">⚙️ Other Problem</div>
 
 </div>
+
+<button onclick="repair()" class="repair-btn">
+Book Repair on WhatsApp
+</button>
 
 </section>
 
@@ -121,9 +95,29 @@
 <p>Developed by Pathan Mohammed Alikhan</p>
 </footer>
 
-<!-- FLOATING WHATSAPP -->
-
 <a href="https://wa.me/919978256555" class="whatsapp">WhatsApp</a>
+
+<!-- REPAIR FORM -->
+
+<div id="repairForm" class="repair-form">
+
+<div class="form-box">
+
+<h2>Mobile Repair Booking</h2>
+
+<input type="text" id="custName" placeholder="Your Name">
+
+<input type="text" id="mobileModel" placeholder="Mobile Name And Model">
+
+<input type="text" id="problemType" placeholder="Problem">
+
+<button onclick="sendRepair()">Send on WhatsApp</button>
+
+<button onclick="closeForm()" class="close">Close</button>
+
+</div>
+
+</div>
 
 <script src="script.js"></script>
 

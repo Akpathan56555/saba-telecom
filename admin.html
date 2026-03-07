@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SABA TELECOM ADMIN</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#0f2027;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+.panel{
+background:#203a43;
+padding:30px;
+border-radius:10px;
+width:320px;
+margin:auto;
+}
+
+input{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:none;
+border-radius:6px;
+}
+
+button{
+background:#25D366;
+border:none;
+padding:10px;
+width:100%;
+color:white;
+border-radius:6px;
+cursor:pointer;
+margin-top:5px;
+}
+
+button:hover{
+background:#1ebe5d;
+}
+
+.mobile{
+background:#162a32;
+margin-top:15px;
+padding:10px;
+border-radius:8px;
+}
+
+.mobile img{
+width:80px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>SABA TELECOM ADMIN</h1>
+
+<div class="panel">
+
+<input id="name" placeholder="Mobile Name">
+
+<input id="ram" placeholder="RAM / Storage">
+
+<input id="price" placeholder="Price">
+
+<input type="file" id="image">
+
+<input id="brand" placeholder="Brand (Samsung / Redmi)">
+
+<label>Mobile Video URL</label>
+<input type="text" id="video" placeholder="Paste mobile video link">
+
+<button onclick="addMobile()">Add Mobile</button>
+
+</div>
+
+<h2>Saved Mobiles</h2>
+
+<div id="list"></div>
+
+<script>
+
+let mobiles = JSON.parse(localStorage.getItem("mobiles")) || []
+
+function save(){
+localStorage.setItem("mobiles",JSON.stringify(mobiles))
+showMobiles()
+}
+
+function addMobile(){
+
+let name=document.getElementById("name").value
+let ram=document.getElementById("ram").value
+let price=document.getElementById("price").value
+let brand=document.getElementById("brand").value
+
+let file=document.getElementById("image").files[0]
+
+let reader=new FileReader()
+
+reader.onload=function(){
+
+let image=reader.result
+
+mobiles.push({name,ram,price,image,brand})
+
+save()
+
+}
+
+reader.readAsDataURL(file)
+
+}
+
+function deleteMobile(i){
+
+mobiles.splice(i,1)
+
+save()
+
+}
+
+function showMobiles(){
+
+let html=""
+
+mobiles.forEach((m,i)=>{
+
+html+=`
+
+<div class="mobile">
+
+<img src="${m.image}">
+
+<h3>${m.name}</h3>
+
+<p>${m.ram}</p>
+
+<p>₹${m.price}</p>
+
+<button onclick="deleteMobile(${i})">Delete</button>
+
+</div>
+
+`
+
+})
+
+document.getElementById("list").innerHTML=html
+
+}
+
+showMobiles()
+
+</script>
+
+</body>
+</html>
